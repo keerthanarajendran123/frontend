@@ -14,7 +14,8 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { useChatState } from "../Context/ChatProvider"; 
-const ENDPOINT = "http://localhost:5000"; // "link"; -> After deployment
+const ENDPOINT = import.meta.env.VITE_API_URL || "http://localhost:5000";
+ // link of backend local
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
