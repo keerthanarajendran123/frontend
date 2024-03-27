@@ -14,7 +14,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { useChatState } from "../Context/ChatProvider"; 
-// const ENDPOINT = "https://chat-app-backend-z6kx.onrender.com"; // "link"; -> After deployment
+const ENDPOINT = "http://localhost:5000"; // "link"; -> After deployment
 let socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
