@@ -1,6 +1,6 @@
 import { Box, Container, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Changed import path
+import { useNavigate } from "react-router-dom"; 
 import Login from "../components/Authentication/Login";
 import Signup from "../components/Authentication/Signup";
 
@@ -11,7 +11,6 @@ function Homepage() {
     const user = JSON.parse(localStorage.getItem("userInfo"));
 
     if (user) {
-      // If user information exists, navigate to the "/chats" route
       navigate("/chats");
     }
   }, [navigate]);
